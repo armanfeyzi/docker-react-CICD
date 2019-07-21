@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ci-react -f Dockerfile.dev .
+  - docker build -t react_CICD -f Dockerfile.dev .
 
 scripts:
-  - docker run ci-react npm run test -- --coverage
+  - docker run react_CICD npm run test -- --coverage
